@@ -8,7 +8,7 @@ body {
 }
 /* タイプセレクタ。pタグ全てに適用される */
 p{ 
-color: brown; 
+color: red; 
 }
 </style>
 

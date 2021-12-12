@@ -1,5 +1,6 @@
 body {    
   background-color: #486d46;
+  background-image: url("ippon-matsu.jpg");
 }
 
 /* タイプセレクタ。pタグ全てに適用される */

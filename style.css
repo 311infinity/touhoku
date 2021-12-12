@@ -1,32 +1,31 @@
-body {    
-  background-color: #486d46;
-  background-image: url("ippon-matsu.jpg");
+.title1 {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: url("ippon-matsu.jpg") no-repeat center center / cover; 
+ height: 200px;
+ color: #FFF;
+ font-size: 200%;
+ font-weight: bold;
 }
 
-/* タイプセレクタ。pタグ全てに適用される */
-p { 
-  color: blue; 
-}
 
 
-/*
-﻿<style type="text/css"> 
-
-body {    
-  background-color: #486d46;  
+/*﻿  ここからコメント行 参照の為
+<style type="text/css"> 
+body { 
+  background-color: #486d46; 
   background-image: url("ippon-matsu.jpg");
-  background-size: cover;  
-  background-attachment: fixed; 
+  background-size: cover; 
+  background-attachment: fixed;
   background-position: center center;
 }
 
 p { 
-  color: blue; 
+  color: blue;
 }
-
 </style>
-*/
-
+*/ 
 
 
 

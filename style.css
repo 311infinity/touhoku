@@ -26,7 +26,7 @@ h1 {
 .balloon1 .faceicon img {
    width: 100%;
    height: auto;
-   border: solid 3px #d7ebfe;
+   border: solid 3px lightpink;
    border-radius: 50%; 
 }  
 .balloon1 .chatting {
@@ -38,7 +38,7 @@ h1 {
   margin: 5px 0 0 105px;
   padding: 17px 13px;
   border-radius: 12px;
-  background: #d7ebfe; 
+  background: lightpink; 
 }
 .says1:after {
   content: "";
@@ -47,7 +47,7 @@ h1 {
   top: 18px;
   left: -24px;
   border: 12px solid transparent;
-  border-right: 12px solid #d7ebfe; 
+  border-right: 12px solid lightpink; 
 }
 .says1 p {
    margin: 0;
@@ -69,7 +69,7 @@ h1 {
 .balloon2 .faceicon img {
    width: 100%;
    height: auto;
-   border: solid 3px #d7ebfe;
+   border: solid 3px khaki;
    border-radius: 50%; 
 }  
 .balloon2 .chatting {
@@ -81,7 +81,7 @@ h1 {
   margin: 5px 105px 0 0;   /* margin top right bottom left */
   padding: 13px 17px;
   border-radius: 12px;
-  background: #d7ebfe; 
+  background: khaki; 
 }
 .says2:after {
   content: "";
@@ -90,12 +90,21 @@ h1 {
   top: 18px;
   right: -24px;
   border: 12px solid transparent;
-  border-left: 12px solid #d7ebfe; 
+  border-left: 12px solid khaki; 
 }
 .says2 p {
    margin: 0;
    padding: 0; 
 }
+
+/*アイコンの下の名前*/
+.balloon1 .faceicon figcaption ,
+.balloon2 .faceicon figcaption {
+      padding:2px 0 0;
+      font-size:12px;
+      text-align:center;
+}
+
 
 
 

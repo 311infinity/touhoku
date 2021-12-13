@@ -11,6 +11,11 @@ h1 {
   font-weight: bold;
 }
 
+/* Bodyに背景を付ける＝サイト全体 */
+Body {
+  background: url("floor-tile.png")
+}
+
 
 /* 吹き出し 顔が右側パターン */
 .balloon1 {

@@ -17,9 +17,9 @@ Body {
 }
 
 /* 文字の大きさと色を同時に指定 */
-span {
-  font-size: 20px;
-  color: Black
+.FontStyle1 {
+  font-size: 18px;
+  color: Blue;
 }
 
 

@@ -17,7 +17,8 @@ Body {
 }
 
 /* 文字の大きさと色を同時に指定 */
-<span style="font-size: 200%;color:Blue"></span>
+span.style1 {font-size: 12px;color: Blue }
+
 
 
 /* 吹き出し 顔が右側パターン */

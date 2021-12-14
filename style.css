@@ -18,6 +18,7 @@ Body {
 
 /* 文字の大きさと色を同時に指定 */
 .FontStyle1 {
+  font-weight: bold;
   font-size: 200%;
   color: #6495ED;
 }

@@ -18,6 +18,10 @@ Body {
 
 /* 文字の大きさと色を同時に指定 */
 .FontStyle1 {
+  font-size: 200%;
+  color: #6495ED;
+}
+.FontStyle2 {
   font-size: 18px;
   color: Blue;
 }

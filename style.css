@@ -11,20 +11,66 @@ h1 {
   font-weight: bold;
 }
 
-/* Bodyに背景を付ける＝サイト全体 */
+
+/* Bodyに背景を付ける＝サイト全体 タイル画像 */
 Body {
   background: url("floor-tile.png")
 }
 
-/* 文字の大きさと色を同時に指定 */
+
+/* 文字の大きさと色を同時に指定 mapのリンク文字用 */
 .FontStyle1 {
   font-weight: bold;
   font-size: 200%;
   color: #6495ED;
 }
-.FontStyle2 {
-  font-size: 18px;
-  color: Blue;
+
+
+/*メインページのリンクbox用 */
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; 
+} 
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* font-size: 62.5%; */   /*removed - rem算出をしやすくするために*/ 
+} 
+.btn, a.btn, button.btn {
+  font-size: 1.2rem;   /* changed from 1.6 */
+  font-weight: 400;      /* changed from 700 */
+  line-height: 0.5;         /* changed from 1.5 */
+  display: inline-block;
+  padding: 1rem 8rem;    /* changed from 1rem 4rem */
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem; 
+}
+ a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00; 
+}
+  a.btn--orange:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f56500;
+  border-bottom: 2px solid #b84c00; 
+}
+a.btn--shadow {
+  -webkit-box-shadow:
+  0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3); 
 }
 
 
@@ -121,22 +167,3 @@ Body {
       font-size:12px;
       text-align:center;
 }
-
-
-
-
-/*﻿  ここからコメント行 参照の為
-<style type="text/css"> 
-body { 
-  background-color: #486d46; 
-  background-image: url("ippon-matsu.jpg");
-  background-size: cover; 
-  background-attachment: fixed;
-  background-position: center center;
-}
-
-p { 
-  color: blue;
-}
-</style>
-*/ 

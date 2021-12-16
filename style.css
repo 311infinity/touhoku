@@ -1,5 +1,8 @@
 
-/* h1ヘッダーに背景を付ける */
+/* ===================
+    h1ヘッダーに背景画像を付ける
+   ippon-matsu.jpg を他の画像ファイルに置換可能
+    =================== */
 h1 {
   display: flex;
   justify-content: center;
@@ -26,7 +29,21 @@ Body {
 }
 
 
-/*メインページのリンクbox用 */
+/* フッター */
+footer {
+  width: 100%;
+  height: 20px; 
+  text-align: center;
+  font-size: 70%;
+  /* color: white; */
+  padding: 0 0;
+  /* background-color: #EEEEEE ;  */
+}
+
+
+/* ===================
+   ここからメインページのリンクbox用
+    =================== */
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; 
@@ -34,14 +51,15 @@ Body {
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  /* font-size: 62.5%; */   /*removed - rem算出をしやすくするために*/ 
+  /* font-size: 62.5%; */   
+  /*removed - rem算出をしやすくするために*/ 
 } 
 .btn, a.btn, button.btn {
-  font-size: 1.2rem;   /* changed from 1.6 */
-  font-weight: 400;      /* changed from 700 */
-  line-height: 0.5;         /* changed from 1.5 */
+  font-size: 1.2rem;    /*  1.6 */
+  font-weight: 400;      /* 700 */
+  line-height: 0.5;         /* 1.5 */
   display: inline-block;
-  padding: 1rem 4rem;    /* changed from 1rem 4rem */
+  padding: 1rem 4rem;    /* 1rem 4rem */
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -56,7 +74,25 @@ html {
   color: #212529;
   border-radius: 0.5rem; 
 }
- a.btn--orange {
+ a.btn--blue {
+  color: #fff;
+  /*  item.html の中のリンクボタンの色変更はココ
+  lightseagreen cadetblue steelblue dodgerblue 等 */
+  background-color: #66CCCC;
+  border-bottom: 5px solid steelblue; 
+}
+  a.btn--blue:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: lightseagreen;
+  border-bottom: 2px solid steelblue; 
+}
+a.btn--shadow {
+  -webkit-box-shadow:
+  0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3); 
+}
+a.btn--orange {
   color: #fff;
   background-color: #eb6100;
   border-bottom: 5px solid #b84c00; 
@@ -67,14 +103,11 @@ html {
   background: #f56500;
   border-bottom: 2px solid #b84c00; 
 }
-a.btn--shadow {
-  -webkit-box-shadow:
-  0 3px 5px rgba(0, 0, 0, .3);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, .3); 
-}
 
 
-
+/* ===================
+   ここから 吹き出し会話の項目
+    =================== */
 /* 吹き出し 顔が右側パターン */
 .balloon1 {
   width: 100%; 
@@ -116,7 +149,6 @@ a.btn--shadow {
    margin: 0;
    padding: 0; 
 }
-
 
 /* 吹き出し 顔が左側パターン */
 .balloon2 {
@@ -167,3 +199,173 @@ a.btn--shadow {
       font-size:12px;
       text-align:center;
 }
+
+
+
+/* ===================
+   ここから下は年表用
+    =================== */
+/*
+body {
+    background: #e6e6e6;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+   }
+*/
+
+/*===== Vertical Timeline =====*/
+#conference-timeline {
+  position: relative;
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+/*﻿  スタートする年月日を指定 */
+#conference-timeline .timeline-start,
+#conference-timeline .timeline-end {
+  display: table;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+ /* 背景色 Light Orange = #DEB887、深緑青  cadetblue*/
+  background: #66CCCC;
+  border: 1px solid darkblue;
+  padding: 12px 12px;         /* 15 23px; */
+  color: #fff;
+  max-width: 40%;                /* 5%; */
+  width: 100%;
+  text-align: left;                   /* center */
+  margin: 0 auto;
+}
+#conference-timeline .conference-center-line {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 10%;                            /* left 50% */
+  margin-left: -2px;
+  background: #66CCCC;   /* Light Orange = #DEB887; */
+  z-index: -1;
+}
+#conference-timeline .conference-timeline-content {
+  padding-top: 5px;            /* 67 */
+  padding-bottom: 5px;    /* 67 */
+}
+.timeline-article {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 5px 0;               /* 20 0 */
+}
+.timeline-article .content-right-container {
+  max-width: 90%;             /* 44 */
+  width: 100%;
+}
+ /* 右側のイベント内容表示枠の設定 */
+.timeline-article .content-right {
+  position: relative;
+  width: auto;
+  border: 1px solid #ddd;
+  background-color: #F5F5F5;     /*  #fff; #EEFFFF*/
+  box-shadow: 0 1px 3px rgba(0,0,0,.03);
+  padding: 10px 10px;                    /* 27 25px */
+  border-radius: 5px;   
+}
+.timeline-article p {
+  margin: 0 5px 0 5px;    /* 60 */
+  padding: 0;
+  font-weight: 400;
+  color: #242424;           /*  #242424 */
+  font-size: 1.1em;         /*   14px */
+  line-height: 24px;
+  position: relative;
+}
+.timeline-article .content-right-container {
+  float: right;
+}
+.timeline-article .content-right:before{
+  position: absolute;
+  top: 20px;
+  font-size: 23px;
+  font-family: "FontAwesome";
+  color: #F5F5F5;      /* #fff;  */
+}
+.timeline-article .content-right:before {
+  content: "\f0d9";
+  left: -82px;
+}
+.timeline-article .meta-time {
+  position: absolute;
+  top: 10px;
+  left: 10%;                         /*  5%; */
+  width: 65px;                    /* 62; */
+  height: 40px;                     /* 62; */
+  margin-left: 0;           /*  -31px */
+  color: #fff;
+  border: 1px solid darkblue;
+  border-radius: 50%;          /* changed from 100 */
+  background: #66CCCC;    /* Ligjt Orange = #DEB887;66BCBC */
+}
+.timeline-article .meta-time .large,
+.timeline-article .meta-time .small {
+  display: block;
+  text-align: center;
+  font-weight: 900;
+}
+.timeline-article .meta-time .large {
+  font-size: 16px;
+  line-height: 40px;
+}
+.timeline-article .meta-time .small {
+  font-size: 11px;
+  line-height: 40px;
+}
+/*===== // Vertical Timeline =====*/
+
+/*===== Resonsive Vertical Timeline =====*/
+@media only screen and (max-width: 830px) {
+  #conference-timeline .timeline-start,
+  #conference-timeline .timeline-end {
+    margin: 10pt 0;          /* margin: 0; */
+  }
+  #conference-timeline .conference-center-line {
+    margin-left: 0;
+    left: 39px;    /* 20px */
+  }
+  .timeline-article .meta-time {
+    margin-left: 0;
+    top: 10px;
+    left: 5px;
+  }
+  .timeline-article .content-right-container {
+    max-width: 100%;
+    width: auto;
+    float: none;
+    margin-left: 90px;     /* 10px */
+    margin-right: 10px;   
+    min-height: 53px;
+  }
+  .timeline-article .content-right {
+    padding: 10px 18px;    /* changed 10px 25px */
+    min-height: 40px;         /* changed 65px */
+  }
+  .timeline-article .content-right:before {
+    content: "\f0d9";
+    right: auto;
+    left: -8px;
+         /* display: none;  */
+  }
+}
+/*
+@media only screen and (max-width: 900px) {
+  .timeline-article p {
+    margin: 0;
+  }
+}
+*/
+
+/* ===================
+   年表終了 / Resonsive Vertical Timeline
+    =================== */
